@@ -1,0 +1,93 @@
+/* Importar tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcfcfc;
+    overflow-x: hidden; 
+}
+
+/* Colores de marca */
+.text-warning { color: #f6b21b !important; }
+.bg-warning { background-color: #f6b21b !important; }
+.btn-warning { 
+    background-color: #f6b21b; 
+    border-color: #f6b21b;
+    color: #fff;
+}
+.btn-warning:hover {
+    background-color: #e5a315;
+    border-color: #e5a315;
+    color: #fff;
+}
+.fs-7 { font-size: 0.75rem; letter-spacing: 1px; }
+
+/* Contenedor principal blindado */
+.hero-images-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px; /* Tamaño máximo */
+    aspect-ratio: 1 / 1; /* Mantiene el contenedor siempre cuadrado */
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Imagen central forzada a círculo perfecto */
+.main-img {
+    width: 75%;
+    height: 75%;
+    object-fit: cover; /* Evita que la imagen se estire */
+    border-radius: 50% !important; /* Fuerza el círculo */
+    border: 15px solid white;
+    z-index: 2;
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.15);
+}
+
+/* Anillos ajustados para ser responsivos */
+.hero-ring {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ring-1 {
+    width: 90%;
+    height: 90%;
+    border: 2px solid rgba(246, 178, 27, 0.5);
+}
+
+.ring-2 {
+    width: 110%;
+    height: 110%;
+    border: 2px dashed rgba(220, 53, 69, 0.4);
+}
+
+/* Satélites en posiciones relativas */
+.satellite-img {
+    position: absolute;
+    width: 22%;
+    height: 22%;
+    z-index: 3;
+    transition: transform 0.3s ease;
+    background: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15);
+}
+
+.satellite-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Posiciones porcentuales para que no se desarmen */
+.sat-1 { top: 0; right: 8%; }
+.sat-2 { top: 40%; left: -5%; }
+.sat-3 { bottom: 2%; left: 15%; }
