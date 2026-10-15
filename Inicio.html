@@ -10,13 +10,12 @@
     
 </head>
 <body>
-
-    <nav class="navbar navbar-expand-lg bg-white py-3">
+    <nav class="navbar navbar-expand-lg bg-white py-3 shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
                 <span class="text-warning"><i class="bi bi-egg-fried"></i> Sabores</span>delBarrio
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -41,26 +40,23 @@
 
     <section class="container py-5 mt-4">
         <div class="row align-items-center">
-            
-      
             <div class="col-lg-6 position-relative hero-images-container text-center">
-            
                 <div class="hero-ring ring-1"></div>
                 <div class="hero-ring ring-2"></div>
                 
-                <img src="https://chileestuyo.cl/wp-content/uploads/2024/04/Chorrillana.jpg" alt="Plato principal" class="main-img rounded-circle shadow-lg">
+                <img src="https://cdn.shopify.com/s/files/1/0669/8503/3862/files/20260813144114-caldillo-de-mariscos.jpg?v=1786632076" alt="Plato principal" class="main-img">
                 
-                <div class="satellite-img sat-1 rounded-circle shadow bg-white p-2">
-                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=150&auto=format&fit=crop" class="rounded-circle w-100" alt="Mini plato">
+                <div class="satellite-img sat-1">
+                    <img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=150&auto=format&fit=crop" alt="Mini plato">
                 </div>
-                <div class="satellite-img sat-2 rounded-circle shadow bg-white p-2">
-                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=150&auto=format&fit=crop" class="rounded-circle w-100" alt="Tostada">
+                <div class="satellite-img sat-2">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=150&auto=format&fit=crop" alt="Tostada">
                 </div>
-                <div class="satellite-img sat-3 rounded-circle shadow bg-white p-2">
-                    <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?q=80&w=150&auto=format&fit=crop" class="rounded-circle w-100" alt="Huevo frito">
+                <div class="satellite-img sat-3">
+                    <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?q=80&w=150&auto=format&fit=crop" alt="Huevo frito">
                 </div>
             </div>
-    
+
             <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
                 <p class="text-warning fw-bold text-uppercase tracking-wide fs-7 mb-2">COCINA LOCAL - CINCO SUCURSALES</p>
                 <h1 class="display-4 fw-bolder text-dark lh-sm mb-4">
@@ -71,7 +67,7 @@
                 </p>
                 
                 <div class="d-flex flex-wrap gap-3 mb-4">
-                    <button class="btn btn-warning rounded-pill px-4 py-2 fw-semibold text-white d-flex align-items-center gap-2">
+                    <button class="btn btn-warning rounded-pill px-4 py-2 fw-semibold text-white d-flex align-items-center gap-2 btn-pedir-ahora">
                         Pedir ahora <i class="bi bi-bag"></i>
                     </button>
                     <button class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold border-2 d-flex align-items-center gap-2">
@@ -88,6 +84,232 @@
 
         </div>
     </section>
+    <section class="container py-5 mt-4 text-center">
+        <div class="position-relative d-flex align-items-center justify-content-center slider-container w-100">
+            
+            
+            <div class="side-card d-none d-md-block overflow-hidden shadow-sm">
+                <img id="img-left" src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Plato Anterior">
+            </div>
+
+            
+            <button class="btn-egg position-absolute shadow-sm" id="btn-prev" style="left: 12%; z-index: 5;">
+                <i class="bi bi-arrow-left text-warning fs-5"></i>
+            </button>
+            
+            
+            <div class="slider-main-card position-relative overflow-hidden mx-3 shadow-lg z-3">
+                <img id="img-center" src="https://cdn.shopify.com/s/files/1/0669/8503/3862/files/20260813144114-caldillo-de-mariscos.jpg?v=1786632076" alt="Plato Actual" class="w-100 h-100 object-fit-cover opacity-75 carrusel-img">
+                
+                <div class="position-absolute top-50 start-50 translate-middle text-white w-100 px-4">
+                    <p class="fw-bold text-uppercase tracking-wide fs-7 mb-2" style="color: #fdb813;">HISTORIAS PARA COMPARTIR</p>
+                    <h2 id="title-center" class="display-3 fw-bolder mb-3 carrusel-text" style="font-family: serif;">Caldillo del<br>Barrio</h2>
+                    <p id="desc-center" class="small mb-4 px-md-5 carrusel-text">Mariscos, tomate, hierbas frescas y caldo de la casa</p>
+                    <button class="btn btn-pedido rounded-pill px-4 py-2 fw-semibold text-white">
+                        Pedir este plato <i class="bi bi-arrow-right ms-2"></i>
+                    </button>
+                </div>
+            </div>
+
+            
+            <button class="btn-egg position-absolute shadow-sm" id="btn-next" style="right: 12%; z-index: 5;">
+                <i class="bi bi-arrow-right text-warning fs-5"></i>
+            </button>
+
+            
+            <div class="side-card d-none d-md-block overflow-hidden shadow-sm">
+                <img id="img-right" src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?q=80&w=600&auto=format&fit=crop" class="w-100 h-100 object-fit-cover" alt="Plato Siguiente">
+            </div>
+
+        </div>
+    </section>
+
+    
+    <section class="container py-5 mt-2">
+        <div class="row align-items-end mb-4">
+            <div class="col-md-6">
+                <p class="text-muted fw-bold text-uppercase tracking-wide fs-7 mb-1">MENÚ DE PROVIDENCIA</p>
+                <h2 class="display-3 fw-bolder text-dark" style="font-family: serif;">Elige algo <br><span class="text-warning">rico.</span></h2>
+            </div>
+            <div class="col-md-6 d-flex flex-column flex-md-row justify-content-md-end gap-3 mt-4 mt-md-0">
+                <button class="btn btn-outline-secondary rounded-pill px-4 bg-white text-dark border-opacity-25 d-flex align-items-center gap-2 shadow-sm">
+                    <i class="bi bi-geo-alt"></i> Providencia <i class="bi bi-chevron-down ms-2 fs-7"></i>
+                </button>
+                <div class="position-relative">
+                    <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-muted"></i>
+                    <input type="text" class="form-control rounded-pill ps-5 py-2 border-secondary border-opacity-25 shadow-sm bg-white" placeholder="Buscar en el menú">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex gap-2 mb-5 overflow-auto pb-2">
+            <button class="btn btn-orange text-white rounded-pill px-4 fw-semibold">Todos</button>
+            <button class="btn bg-white text-muted border border-secondary border-opacity-25 rounded-pill px-4 shadow-sm">Desayunos</button>
+            <button class="btn bg-white text-muted border border-secondary border-opacity-25 rounded-pill px-4 shadow-sm">Almuerzos</button>
+            <button class="btn bg-white text-muted border border-secondary border-opacity-25 rounded-pill px-4 shadow-sm">Sándwiches</button>
+            <button class="btn bg-white text-muted border border-secondary border-opacity-25 rounded-pill px-4 shadow-sm">Vegetarianos</button>
+            <button class="btn bg-white text-muted border border-secondary border-opacity-25 rounded-pill px-4 shadow-sm">Familiares</button>
+        </div>
+
+        <div class="row g-5">
+            <!-- Plato 1 -->
+            <div class="col-md-4">
+                <div class="w-75 mx-auto mb-4">
+                    <img src="https://cdn.shopify.com/s/files/1/0669/8503/3862/files/20260813144114-caldillo-de-mariscos.jpg?v=1786632076" class="rounded-circle menu-item-img shadow-sm" alt="Caldillo">
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h4 class="fw-bold mb-0 text-dark" style="font-family: serif;">Caldillo del Barrio</h4>
+                    <span class="fw-bold fs-6 text-dark">$9.990</span>
+                </div>
+                <p class="text-muted small mb-3">Mariscos, tomate, hierbas frescas y caldo de la casa</p>
+                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3 border-opacity-25">
+                    <span class="text-muted" style="font-size: 0.7rem;">Contiene: Mariscos</span>
+                    <button class="btn btn-warning rounded-pill px-3 py-1 btn-sm fw-semibold text-white btn-agregar"><i class="bi bi-plus"></i> Agregar</button>
+                </div>
+            </div>
+            
+            <!-- Plato 2 -->
+            <div class="col-md-4">
+                <div class="w-75 mx-auto mb-4">
+                    <img src="https://images.unsplash.com/photo-1588168333986-5078d3ae3976?q=80&w=600&auto=format&fit=crop" class="rounded-circle menu-item-img shadow-sm" alt="Huevos">
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h4 class="fw-bold mb-0 text-dark" style="font-family: serif;">Huevos del barrio</h4>
+                    <span class="fw-bold fs-6 text-dark">$7.490</span>
+                </div>
+                <p class="text-muted small mb-3">Huevos de campo, pan tostado y salsa casera</p>
+                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3 border-opacity-25">
+                    <span class="text-muted" style="font-size: 0.7rem;">Contiene: Gluten · Huevo</span>
+                    <button class="btn btn-warning rounded-pill px-3 py-1 btn-sm fw-semibold text-white btn-agregar"><i class="bi bi-plus"></i> Agregar</button>
+                </div>
+            </div>
+
+            <!-- Plato 3 -->
+            <div class="col-md-4">
+                <div class="w-75 mx-auto mb-4">
+                    <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?q=80&w=600&auto=format&fit=crop" class="rounded-circle menu-item-img shadow-sm" alt="Tostada">
+                </div>
+                <div class="d-flex justify-content-between align-items-baseline mb-2">
+                    <h4 class="fw-bold mb-0 text-dark" style="font-family: serif;">Tostada mediterránea</h4>
+                    <span class="fw-bold fs-6 text-dark">$6.990</span>
+                </div>
+                <p class="text-muted small mb-3">Tomates, palta y semillas tostadas</p>
+                <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-3 border-opacity-25">
+                    <span class="text-muted" style="font-size: 0.7rem;">Contiene: Gluten · Sésamo</span>
+                    <button class="btn btn-warning rounded-pill px-3 py-1 btn-sm fw-semibold text-white btn-agregar"><i class="bi bi-plus"></i> Agregar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="py-5 mt-5">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                
+                <div class="col-lg-5">
+                    <p class="fw-bold text-orange text-uppercase tracking-wide fs-7 mb-2">CLUB DEL BARRIO</p>
+                    <h2 class="display-3 fw-bolder text-dark lh-sm mb-4" style="font-family: serif;">
+                        Mientras más <br>compartes, <br><span class="text-orange">más ganas.</span>
+                    </h2>
+                    <p class="text-muted mb-4 pe-lg-4 fs-6">
+                        Acumula puntos en cada pedido directo, recibe regalos de cumpleaños y beneficios pensados según tus gustos.
+                    </p>
+                    <button class="btn btn-outline-dark rounded-pill px-4 py-2 fw-semibold d-inline-flex align-items-center gap-2">
+                        Crear mi cuenta <i class="bi bi-arrow-right"></i>
+                    </button>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="bg-white p-4 text-center card-arch shadow-sm h-100 d-flex flex-column align-items-center pt-5">
+                                <span class="text-muted small mb-4 align-self-start">01</span>
+                                <i class="bi bi-star text-orange fs-4 mb-4"></i>
+                                <h5 class="fw-bold mb-2 text-dark" style="font-family: serif;">1 punto</h5>
+                                <p class="text-muted small mb-0">por cada $100 en compras</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white p-4 text-center card-arch shadow-sm h-100 d-flex flex-column align-items-center pt-5">
+                                <span class="text-muted small mb-4 align-self-start">02</span>
+                                <i class="bi bi-star text-orange fs-4 mb-4"></i>
+                                <h5 class="fw-bold mb-2 text-dark" style="font-family: serif;">Canje fácil</h5>
+                                <p class="text-muted small mb-0">desde tu próximo pedido</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-white p-4 text-center card-arch shadow-sm h-100 d-flex flex-column align-items-center pt-5">
+                                <span class="text-muted small mb-4 align-self-start">03</span>
+                                <i class="bi bi-star text-orange fs-4 mb-4"></i>
+                                <h5 class="fw-bold mb-2 text-dark" style="font-family: serif;">Solo para ti</h5>
+                                <p class="text-muted small mb-0">promociones según tus gustos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-3" style="background-color: #1a1a1a;">
+        <div class="container pt-4">
+            <div class="row g-5 mb-5">
+                
+                <div class="col-lg-4 pe-lg-5">
+                    <a class="navbar-brand fw-bold fs-4 text-white text-decoration-none mb-3 d-block" href="#">
+                        <span class="text-warning"><i class="bi bi-egg-fried"></i> Sabores</span>delBarrio
+                    </a>
+                    <p class="text-white-50 small pe-4">
+                        Cocina honesta, ingredientes frescos y recetas que se sienten como en casa.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-4">Explora</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Mis pedidos</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-4">Información</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-3 small">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Menú</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Club del Barrio</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Ayuda</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4">
+                    <h6 class="fw-bold mb-4">Recibe novedades</h6>
+                    <p class="text-white-50 small mb-4">Nuevos platos y beneficios, sin spam.</p>
+                    <div class="position-relative">
+                        <input type="email" class="form-control bg-transparent text-white input-footer pb-2 ps-0" placeholder="Tu correo">
+                        <i class="bi bi-arrow-right position-absolute top-50 end-0 translate-middle-y text-white-50 pe-2" style="cursor: pointer;"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row pt-4 border-top border-secondary border-opacity-50 small text-white-50 align-items-center">
+                <div class="col-md-4 text-center text-md-start mb-2 mb-md-0">
+                    © 2026 Sabores del Barrio
+                </div>
+                <div class="col-md-4 text-center mb-2 mb-md-0">
+                    Hecho con cariño en Santiago.
+                </div>
+                <div class="col-md-4 text-center text-md-end d-flex justify-content-center justify-content-md-end gap-4">
+                    <a href="#" class="text-white-50 text-decoration-none">Privacidad</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/Inicio.js"></script>

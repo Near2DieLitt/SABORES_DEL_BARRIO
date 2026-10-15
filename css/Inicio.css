@@ -1,51 +1,67 @@
-/* Importar tipografía */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #fcfcfc;
-    overflow-x: hidden; 
+    background-color: #fcf6eb; /* Tono crema cálido */
+    overflow-x: hidden;
 }
 
-/* Colores de marca */
-.text-warning { color: #f6b21b !important; }
-.bg-warning { background-color: #f6b21b !important; }
-.btn-warning { 
-    background-color: #f6b21b; 
-    border-color: #f6b21b;
-    color: #fff;
+/* Colores de marca y botones */
+.text-warning { color: #fdb813 !important; }
+.bg-warning { background-color: #fdb813 !important; }
+
+.btn-warning {
+    background-color: #fdb813 !important;
+    border-color: #fdb813 !important;
+    color: white !important;
 }
 .btn-warning:hover {
-    background-color: #e5a315;
-    border-color: #e5a315;
-    color: #fff;
+    background-color: #e5a315 !important;
+    border-color: #e5a315 !important;
 }
-.fs-7 { font-size: 0.75rem; letter-spacing: 1px; }
 
-/* Contenedor principal blindado */
+.text-orange { color: #ff5e14 !important; }
+.btn-orange { 
+    background-color: #ff5e14; 
+    border-color: #ff5e14;
+}
+.btn-orange:hover {
+    background-color: #e04f0e;
+    color: white;
+}
+
+.btn-pedido {
+    background-color: #f38f70; 
+    border: none;
+}
+.btn-pedido:hover { background-color: #df7a5c; color: white; }
+
+.fs-7 { font-size: 0.75rem; letter-spacing: 1px; }
+.tracking-wide { letter-spacing: 1.5px; }
+
+/* HERO SECTION                          */
+
 .hero-images-container {
     position: relative;
     width: 100%;
-    max-width: 450px; /* Tamaño máximo */
-    aspect-ratio: 1 / 1; /* Mantiene el contenedor siempre cuadrado */
+    max-width: 450px;
+    aspect-ratio: 1 / 1;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* Imagen central forzada a círculo perfecto */
 .main-img {
     width: 75%;
     height: 75%;
-    object-fit: cover; /* Evita que la imagen se estire */
-    border-radius: 50% !important; /* Fuerza el círculo */
+    object-fit: cover;
+    border-radius: 50% !important;
     border: 15px solid white;
     z-index: 2;
     box-shadow: 0 1rem 3rem rgba(0,0,0,.15);
 }
 
-/* Anillos ajustados para ser responsivos */
 .hero-ring {
     position: absolute;
     border-radius: 50%;
@@ -58,7 +74,7 @@ body {
 .ring-1 {
     width: 90%;
     height: 90%;
-    border: 2px solid rgba(246, 178, 27, 0.5);
+    border: 2px solid rgba(253, 184, 19, 0.5);
 }
 
 .ring-2 {
@@ -67,7 +83,6 @@ body {
     border: 2px dashed rgba(220, 53, 69, 0.4);
 }
 
-/* Satélites en posiciones relativas */
 .satellite-img {
     position: absolute;
     width: 22%;
@@ -87,7 +102,84 @@ body {
     border-radius: 50%;
 }
 
-/* Posiciones porcentuales para que no se desarmen */
 .sat-1 { top: 0; right: 8%; }
 .sat-2 { top: 40%; left: -5%; }
 .sat-3 { bottom: 2%; left: 15%; }
+.satellite-img:hover { transform: scale(1.1); }
+
+/* SLIDER / CARRUSEL FUNCIONAL           */
+
+.slider-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjeta Central con curva inferior pronunciada */
+.slider-main-card {
+    width: 65%;
+    height: 420px;
+    /* Arriba casi recto (30px), Abajo muy curvo (150px) */
+    border-radius: 30px 30px 150px 150px / 20px 20px 50px 50px; 
+    background-color: #4a3e3d; 
+}
+
+/* Tarjetas asomadas a los lados */
+.side-card {
+    width: 15%;
+    height: 350px;
+    border-radius: 20px 20px 80px 80px / 20px 20px 30px 30px; 
+    opacity: 0.6;
+}
+
+/* Transición suave para las imágenes y texto */
+.carrusel-img, .carrusel-text {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Vuelven los huevitos */
+.btn-egg {
+    width: 55px;
+    height: 70px; 
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%; 
+    background-color: #fcf6eb;
+    border: 2px solid #eae1d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-egg:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+
+/* MENÚ Y TARJETAS                       */
+
+.menu-item-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.card-arch {
+    border-radius: 120px 120px 20px 20px;
+    transition: transform 0.3s ease;
+}
+.card-arch:hover { transform: translateY(-5px); }
+
+/* FOOTER                                */
+.input-footer {
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 0;
+}
+.input-footer:focus {
+    box-shadow: none;
+    border-bottom: 1px solid #fdb813 !important;
+}
+.input-footer::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
